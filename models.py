@@ -10,3 +10,14 @@ class Task(Base):
     title = Column(String)
     description = Column(String)
     status = Column(String, default="Pending")
+
+
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True)
+    username = Column(String, unique=True)
+    email = Column(String, unique=True)
+    password = Column(String)
